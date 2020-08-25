@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/relativeLayout"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        map:itemIconTint="@android:color/white"
+        map:itemTextColor="@android:color/white"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toStartOf="@id/map"
+        map:layout_constraintStart_toStartOf="parent"
+        map:menu="@menu/bottom_nav_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@color/white"
+        map:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        map:layout_constraintEnd_toStartOf="@+id/map"
+        map:layout_constraintHorizontal_bias="0.145"
+        map:layout_constraintStart_toEndOf="@+id/map"
+        map:layout_constraintTop_toBottomOf="@+id/map"
+        map:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="20dp"
+        map:srcCompat="@drawable/done" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:tint="@color/white"
+        map:backgroundTint="#0126E0"
+        map:fabSize="mini"
+        map:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        map:layout_constraintEnd_toStartOf="@+id/map"
+        map:layout_constraintHorizontal_bias="0.249"
+        map:layout_constraintStart_toEndOf="@+id/map"
+        map:layout_constraintTop_toBottomOf="@+id/map"
+        map:layout_constraintVertical_bias="1.0"
+        map:srcCompat="@drawable/tune" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:tint="@color/white"
+        map:backgroundTint="#E40303"
+
+        map:fabSize="mini"
+        map:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        map:layout_constraintEnd_toStartOf="@+id/map"
+        map:layout_constraintHorizontal_bias="0.354"
+        map:layout_constraintStart_toEndOf="@+id/map"
+        map:layout_constraintTop_toBottomOf="@+id/map"
+        map:layout_constraintVertical_bias="1.0"
+        map:srcCompat="@drawable/close" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
